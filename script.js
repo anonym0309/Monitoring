@@ -35,6 +35,31 @@ var gCahaya = new JustGage({
     max: 2000, 
     label: "Lux",
     valueFontColor: "#888888"
+}
+                          
+                          /* Gaya untuk tombol Link Publik */
+.btn-public {
+    padding: 12px 25px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #3498db; /* Warna Biru */
+    color: white;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+    transition: 0.3s;
+}
+
+.btn-public:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* Penyesuaian saat Mode Gelap */
+body.dark-mode .btn-public {
+    background-color: #2980b9;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 });
 
 
@@ -97,3 +122,4 @@ tombolTema.addEventListener("click", function() {
     }
 
 });
+
