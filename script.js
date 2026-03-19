@@ -35,8 +35,7 @@ var gCahaya = new JustGage({
     max: 2000, 
     label: "Lux",
     valueFontColor: "#888888"
-}
-                          
+});
 
 
 // ==========================================
@@ -51,9 +50,9 @@ function perbaruiDataSensor() {
         .then(function(data) {
             let hasil = data.feeds[0];
             
-            let suhuUdara = parseFloat(hasil.field3 || 0).toFixed(1);
+            let suhuUdara = parseFloat(hasil.field1 || 0).toFixed(1);
             let lembabUdara = parseFloat(hasil.field2 || 0).toFixed(1);
-            let lembabTanah = parseFloat(hasil.field1 || 0).toFixed(1);
+            let lembabTanah = parseFloat(hasil.field3 || 0).toFixed(1);
             let intensitasCahaya = parseFloat(hasil.field4 || 0).toFixed(0);
 
             // Update teks angka
@@ -96,6 +95,4 @@ tombolTema.addEventListener("click", function() {
         tombolTema.innerText = "Mode Gelap 🌙";
         localStorage.setItem("tema", "terang"); 
     }
-
 });
-
